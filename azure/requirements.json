@@ -1,0 +1,231 @@
+{
+  "projectName": "Community Health and Donor Platform",
+  "projectType": "new-project",
+  "description": "A new healthcare platform for patients, caregivers, clinicians, administrators, and blood donors. It provides role-based dashboards, safe educational symptom guidance, appointments, medication lists and reminders, records and test results, care-team messaging, clinic/user administration, a medicine catalog with demo-only checkout, and blood-donor registration and location/blood-type matching. It supports a sample-data demo mode and a separate production mode. Symptom guidance is educational only, with no automated diagnosis or prescription; clinical guidance must use supplied or approved clinician-reviewed material.",
+  "services": [
+    {
+      "serviceId": "frontend",
+      "name": "Healthcare Platform Web App",
+      "type": "frontend",
+      "description": "Role-based web experience for patients, caregivers, clinicians, administrators, and donors, with dashboards and accessible workflows."
+    },
+    {
+      "serviceId": "backend",
+      "name": "Healthcare Platform API",
+      "type": "backend",
+      "description": "Authentication and role authorization, appointments, medication and reminder data, records, messaging, clinic administration, medicine catalog/demo checkout, donor registration and matching, and safe educational guidance."
+    }
+  ],
+  "questions": [
+    {
+      "serviceId": "frontend",
+      "header": "Frontend language",
+      "question": "Which language should the web app use?",
+      "multiSelect": false,
+      "recommendedChoice": "TypeScript",
+      "answer": "TypeScript",
+      "rationale": "TypeScript provides safer modeling for role-based user experiences and healthcare workflows.",
+      "options": [
+        {
+          "label": "TypeScript",
+          "description": "Recommended for a maintainable, type-safe web application."
+        },
+        {
+          "label": "JavaScript",
+          "description": "Use JavaScript without static type checking."
+        }
+      ],
+      "allowFreeformInput": false,
+      "status": "inferred"
+    },
+    {
+      "serviceId": "frontend",
+      "header": "Frontend framework",
+      "question": "Which frontend framework should the web app use?",
+      "multiSelect": false,
+      "recommendedChoice": "React",
+      "answer": "React",
+      "rationale": "React is a flexible choice for the role-based dashboards and workflows described.",
+      "options": [
+        {
+          "label": "React",
+          "description": "Recommended; broad ecosystem and component-library support."
+        },
+        {
+          "label": "Vue",
+          "description": "A progressive framework with a approachable component model."
+        },
+        {
+          "label": "Angular",
+          "description": "A structured framework with integrated application tooling."
+        },
+        {
+          "label": "Svelte",
+          "description": "A compiler-based framework for concise components."
+        }
+      ],
+      "allowFreeformInput": true,
+      "status": "inferred"
+    },
+    {
+      "serviceId": "frontend",
+      "header": "Frontend features",
+      "question": "Confirm or refine the web app features and user-facing requirements.",
+      "multiSelect": false,
+      "recommendedChoice": "Role-based dashboards for patients, caregivers, clinicians, administrators, and blood donors; symptom education limited to general self-care and urgent-care guidance; appointment booking; medication lists and reminders; records and test results; care-team messaging; user and clinic administration; medicine catalog with demo-only checkout; blood-donor registration and blood-type/location-based matching and requests; separate sample-data demo and production modes. No diagnosis or prescription.",
+      "answer": "Role-based dashboards for patients, caregivers, clinicians, administrators, and blood donors; symptom education limited to general self-care and urgent-care guidance; appointment booking; medication lists and reminders; records and test results; care-team messaging; user and clinic administration; medicine catalog with demo-only checkout; blood-donor registration and blood-type/location-based matching and requests; separate sample-data demo and production modes. No diagnosis or prescription.",
+      "rationale": "Reflects the supplied discovery and keeps symptom guidance within an educational, clinician-reviewed scope.",
+      "status": "inferred"
+    },
+    {
+      "serviceId": "backend",
+      "header": "Backend language",
+      "question": "Which language should the API use?",
+      "multiSelect": false,
+      "recommendedChoice": "TypeScript",
+      "answer": "TypeScript",
+      "rationale": "TypeScript can share language familiarity with the web client and supports structured API development.",
+      "options": [
+        {
+          "label": "TypeScript",
+          "description": "Recommended for a consistent typed JavaScript stack."
+        },
+        {
+          "label": "C# (.NET)",
+          "description": "A mature platform for APIs and enterprise application services."
+        },
+        {
+          "label": "Python",
+          "description": "A general-purpose language with a broad API ecosystem."
+        }
+      ],
+      "allowFreeformInput": false,
+      "status": "inferred"
+    },
+    {
+      "serviceId": "backend",
+      "header": "Backend framework",
+      "question": "Which framework should the API use?",
+      "multiSelect": false,
+      "recommendedChoice": "Express",
+      "answer": "Express",
+      "rationale": "Express is a straightforward framework for the planned API and can be adapted to Azure hosting.",
+      "options": [
+        {
+          "label": "Express",
+          "description": "A minimal, widely used Node.js API framework."
+        },
+        {
+          "label": "NestJS",
+          "description": "A structured TypeScript framework suited to modular APIs."
+        },
+        {
+          "label": "ASP.NET Core",
+          "description": "A mature framework for performant .NET APIs."
+        },
+        {
+          "label": "FastAPI",
+          "description": "A Python framework with concise API and schema support."
+        }
+      ],
+      "allowFreeformInput": true,
+      "status": "inferred"
+    },
+    {
+      "serviceId": "backend",
+      "header": "Backend features",
+      "question": "Confirm or refine the API features and safety requirements.",
+      "multiSelect": false,
+      "recommendedChoice": "Provide APIs for role-based access, appointments, medication lists/reminders, records and results, care-team messaging, administration, medicine catalog and demo-only checkout, donor registration and blood-type/location matching/requests, and distinct demo versus production modes. AI may provide non-diagnostic recommendations only; educational symptom content must be clinician-reviewed and based on supplied/approved material. Do not diagnose or prescribe. Keep production readiness separate from demo and do not assert regulatory compliance without region and requirements being established.",
+      "answer": "Provide APIs for role-based access, appointments, medication lists/reminders, records and results, care-team messaging, administration, medicine catalog and demo-only checkout, donor registration and blood-type/location matching/requests, and distinct demo versus production modes. AI may provide non-diagnostic recommendations only; educational symptom content must be clinician-reviewed and based on supplied/approved material. Do not diagnose or prescribe. Keep production readiness separate from demo and do not assert regulatory compliance without region and requirements being established.",
+      "rationale": "Captures the requested feature set, AI preference, safety boundaries, and distinction between demo and production.",
+      "status": "inferred"
+    },
+    {
+      "header": "Data stores",
+      "question": "Which data stores should the project use?",
+      "multiSelect": true,
+      "recommendedChoice": [
+        "PostgreSQL",
+        "Blob Storage"
+      ],
+      "answer": [
+        "PostgreSQL",
+        "Blob Storage"
+      ],
+      "rationale": "PostgreSQL supports structured users, appointments, donor matching, and catalog data; Blob Storage can hold medical records and test-result files. The selection is not a statement of regulatory compliance.",
+      "options": [
+        {
+          "label": "PostgreSQL",
+          "description": "Relational storage for accounts, appointments, donor profiles, and other structured application data."
+        },
+        {
+          "label": "Azure SQL",
+          "description": "Managed relational storage for structured application data."
+        },
+        {
+          "label": "Blob Storage",
+          "description": "Object storage for records, test results, and other uploaded files."
+        },
+        {
+          "label": "No datastore required",
+          "description": "Choose only when the application needs no persistent storage, file/object storage, queue, cache, or service-associated storage account.",
+          "exclusive": true
+        }
+      ],
+      "allowFreeformInput": false,
+      "status": "inferred"
+    },
+    {
+      "header": "Authentication",
+      "question": "Will users sign in to use application API features?",
+      "multiSelect": false,
+      "recommendedChoice": "Yes",
+      "answer": "Yes",
+      "rationale": "Personal records, appointments, messaging, and role-based workflows require signed-in users.",
+      "options": [
+        {
+          "label": "Yes",
+          "description": "Users sign in to access protected application features."
+        },
+        {
+          "label": "No",
+          "description": "Application API features are available without user sign-in."
+        }
+      ],
+      "allowFreeformInput": false,
+      "status": "inferred"
+    },
+    {
+      "header": "Production Azure region",
+      "question": "Which Azure region should be considered for production planning? Region and jurisdiction can affect data residency and compliance requirements; choosing one here does not establish compliance.",
+      "multiSelect": false,
+      "recommendedChoice": "Not decided yet — keep configurable",
+      "rationale": "The production region was not specified. Keep it undecided rather than assuming a jurisdiction or compliance requirement.",
+      "options": [
+        {
+          "label": "Not decided yet — keep configurable",
+          "description": "Leave production region open for a later informed decision."
+        },
+        {
+          "label": "East US",
+          "description": "Consider only if this region fits user location, residency, and service availability needs."
+        },
+        {
+          "label": "West Europe",
+          "description": "Consider only if this region fits user location, residency, and service availability needs."
+        },
+        {
+          "label": "Southeast Asia",
+          "description": "Consider only if this region fits user location, residency, and service availability needs."
+        },
+        {
+          "label": "Other — specify",
+          "description": "Enter a different Azure region in the form."
+        }
+      ],
+      "allowFreeformInput": true,
+      "status": "needs_input"
+    }
+  ]
+}
